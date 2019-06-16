@@ -1,9 +1,8 @@
 import React from "react";
 import ReactDOM from "react-dom";
-import './style.scss';
+import "./style.scss";
+import App from "./app";
 
-const title = "Webpack 4 with react starter";
-
-ReactDOM.render(<div>{title}</div>, document.getElementById("app"));
+ReactDOM.render(<App />, document.getElementById("app"));
 
 module.hot.accept();
