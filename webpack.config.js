@@ -5,7 +5,7 @@ module.exports = {
   module: {
     rules: [
       {
-        test: /\.js$/,
+        test: /\.(jsx|js)$/,
         exclude: /node_modules/,
         use: {
           loader: "babel-loader"
@@ -13,12 +13,29 @@ module.exports = {
       },
       {
         test: /\.scss$/,
+        exclude: /node_modules/,
+        use: ["style-loader", "css-loader", "sass-loader"]
+      },
+      {
+        test: /\.(png|jpe?g|gif)$/,
         use: [
-            "style-loader", // creates style nodes from JS strings
-            "css-loader", // translates CSS into CommonJS
-            "sass-loader" // compiles Sass to CSS, using Node Sass by default
+          {
+            loader: "file-loader",
+            options: {}
+          }
         ]
-    }
+      },
+      {
+        test: /\.(png|jpg|gif)$/i,
+        use: [
+          {
+            loader: "url-loader",
+            options: {
+              limit: 8192
+            }
+          }
+        ]
+      }
     ]
   },
   devServer: {
