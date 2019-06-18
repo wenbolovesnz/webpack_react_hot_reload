@@ -1,0 +1,29 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<App /> shallow rendering matches the snapshot 1`] = `
+<div>
+  <h1>
+    Webpack 4 with react starter!
+  </h1>
+  <ul>
+    <li>
+      <Link
+        address="reactjs.orgu"
+        text="React"
+      />
+    </li>
+    <li>
+      Webpack
+    </li>
+    <li>
+      Jest and Enzyme
+    </li>
+  </ul>
+  <br />
+  <button
+    onClick={[Function]}
+  >
+    Like it!
+  </button>
+</div>
+`;
