@@ -6,6 +6,7 @@ import toJson from "enzyme-to-json";
 import App from "./components/app";
 
 configure({ adapter: new Adapter() });
+
 describe("<App /> shallow rendering", () => {
   it("h1 contains correct text", () => {
     const wrapper = shallow(<App />);
